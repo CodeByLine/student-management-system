@@ -5,7 +5,7 @@ from .models import User, UserProfile
 
 class UserAdmin(BaseUserAdmin):
     list_display = ('email', 'is_student', 'is_staff', 'is_admin')
-    list_filter = ('is_student', 'is_admin')
+    list_filter = ('is_student', 'is_admin', 'is_staff')
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
         ('Permissions', {'fields': ('is_student', 'is_admin', 'is_staff')}),
